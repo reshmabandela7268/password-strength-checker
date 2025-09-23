@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>How Secure Is My Password?</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="card">
+    <h1>How Secure Is My Password?</h1>
+
+    <div class="input-wrapper">
+      <input type="password" id="pwd" placeholder="Type your password...">
+      <button type="button" id="togglePwd" class="eye-btn">👁️</button>
+    </div>
+
+    <div class="big-output" id="mainResult">Start typing to check...</div>
+
+    <div class="meter" aria-hidden="true">
+      <div id="bar" class="bar"></div>
+    </div>
+
+    <div class="details">
+      <div class="score" id="scoreText">Score: —</div>
+      <div class="label" id="labelText">Strength: —</div>
+    </div>
+
+    <h3>Suggestions</h3>
+    <ul class="suggestions" id="suggestions"></ul>
+
+    <div class="buttons">
+      <button id="copyBtn">Copy Password</button>
+      <button id="genBtn">Generate Strong Password</button>
+    </div>
+  </main>
+
+  <!-- zxcvbn library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.4.2/zxcvbn.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
